@@ -58,9 +58,3 @@ A simple **Job Application Portal** built with **HTML, CSS, and JavaScript**. Th
 - Resume files are stored as Base64 strings.
 
 ---
-
-## **Author**
-Your Name  
-
----
-
