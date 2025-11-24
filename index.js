@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-  // --- DOM Elements ---
+  
   const form = document.getElementById("applicationForm");
   const tableBody = document.querySelector("#applicationsTable tbody");
   const searchBox = document.getElementById("searchName");
@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
   let currentPage = 1;
   const itemsPerPage = 5;
 
-  // --- FORM SUBMISSION ---
+ 
   if (form) {
     form.addEventListener("submit", function(e) {
       e.preventDefault();
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
 
-  // --- LOAD APPLICATIONS ---
+
   function loadApplications() {
     let apps = JSON.parse(localStorage.getItem("applications")) || [];
     apps = applyFilters(apps);
@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
 
-  // --- APPLY FILTERS ---
+ 
   function applyFilters(apps) {
     const nameSearch = searchBox ? searchBox.value.toLowerCase() : "";
     const expFilter = filterExp ? filterExp.value : "";
@@ -99,7 +99,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
 
-  // --- SEARCH / FILTER EVENTS ---
+ 
   if (searchBox) {
     searchBox.addEventListener("input", function(e) {
       e.preventDefault();
@@ -114,7 +114,6 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
 
-  // --- PAGINATION ---
   if (prevPageBtn) {
     prevPageBtn.addEventListener("click", function() {
       if (currentPage > 1) {
@@ -135,7 +134,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
 
-  // --- EDIT / DELETE FUNCTIONS ---
+
   window.editApp = function(id) {
     let apps = JSON.parse(localStorage.getItem("applications")) || [];
     const app = apps.find(a => a.id === id);
@@ -158,6 +157,6 @@ document.addEventListener("DOMContentLoaded", function() {
     loadApplications();
   };
 
-  // Initial load
+
   loadApplications();
 });
