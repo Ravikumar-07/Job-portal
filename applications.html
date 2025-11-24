@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Submitted Applications</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Submitted Applications</h1>
+
+  <div class="filters">
+    <input type="text" id="searchName" placeholder="Search by name">
+    <select id="filterExp">
+      <option value="">All Experience</option>
+      <option value="0-1">0-1 years</option>
+      <option value="2-4">2-4 years</option>
+      <option value="5-9">5-9 years</option>
+      <option value="10+">10+ years</option>
+    </select>
+  </div>
+
+  <table border="1" id="applicationsTable">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Experience</th>
+        <th>Resume</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <div class="pagination">
+    <button id="prevPage">Prev</button>
+    <span id="currentPage">1</span>
+    <button id="nextPage">Next</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
